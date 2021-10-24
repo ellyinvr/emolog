@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>emolog</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">   　
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <style>
+
+        video{
+            width:100%;
+            height:100vh;
+        }
+        .arvr{
+            /* display: flex; 
+            justify-content: space-around; */
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay id="audio">
+        <source src="Sound3.ogg">
+    </audio>
+
+    <div class="video_content">
+        <video src="bat.mp4" autoplay muted></video>
+　  </div>
+
+    <script>
+        document.addEventListener('click', audioPlay);
+            function audioPlay() {
+                document.getElementById('audio').play();
+                document.removeEventListener('click', audioPlay);
+            }
+    </script>
+
+</body>
+</html>
